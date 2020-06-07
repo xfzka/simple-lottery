@@ -1,0 +1,31 @@
+name: CI
+on: [push]
+jobs:
+  minify:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    # 安装 minify
+    - name: Install minify
+      run: sudo apt install minify -y
+    
+    # 压缩
+    - name: minify source code
+      run: |
+        cd source
+        minify ./* -o ../ -v
+        cd ..
+      
+    # commit
+    - name: Commit files
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git commit -m "auto minify" -a
+    # 保存更改
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.AUTOMINIFY }}
+
