@@ -4,6 +4,10 @@
 
 DEMO：[https://lottery.110.sh](https://lottery.110.sh)
 
+![Screenshot](./Screenshot.png)
+
+![Screenshot](./Screenshot2.png)
+
 ## 使用说明
 
 ### 部署
