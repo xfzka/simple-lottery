@@ -26,9 +26,10 @@ jobs:
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git commit -m "auto minify" -a
+        
     # 保存更改
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
-        github_token: ${{ secrets.AUTOMINIFY }}
+        github_token: ${{ secrets.GITHUB_TOKEN }}
 
