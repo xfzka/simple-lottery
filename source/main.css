@@ -1,0 +1,13 @@
+.noneBg {
+    width: 100%;
+    height: 100%;
+}
+
+#setSkin .segment {
+    cursor: pointer;
+}
+
+#prizePool .segment {
+    width: 100%;
+    height: 100%;
+}
