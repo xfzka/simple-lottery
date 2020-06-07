@@ -1,12 +1,12 @@
 # 简易抽奖程序
 
-可控制中奖率的简易抽奖程序，手动启停。
+可控制中奖率的简易抽奖程序，手动启停，可更换背景，自定义标题等。
 
 DEMO：[https://lottery.110.sh](https://lottery.110.sh)
 
-![Screenshot](./Screenshot.png)
+![Screenshot](./screenshot/1.png)
 
-![Screenshot](./Screenshot2.png)
+![Screenshot](./screenshot/2.png)
 
 ## 使用说明
 
