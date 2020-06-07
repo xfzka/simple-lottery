@@ -20,7 +20,7 @@ function startLottery(){lotteryInterval=setInterval(function(){let randomPrizeNa
 lastItem=randomPrizeName;let highlightedColor='inverted blue';$(`[data-name]`).removeClass(highlightedColor);$(`[data-name=${randomPrizeName}]`).addClass(highlightedColor).transition({animation:'pulse',duration:`${parseInt(1000/flashSpeed)*2}ms`});},parseInt(1000/flashSpeed))}
 function stopLottery(){clearInterval(lotteryInterval);}
 function showSetSkinPanel(){$('#setSkin').modal('show');}
-function initSkin(){let genImg=function(imgNumber){return `<div class="column">
+function initSkin(){let genImg=function(imgNumber){return`<div class="column">
                     <div class="ui segment">
                         <img class="ui medium image" src="/background/${imgNumber}.jpg">
                     </div>
