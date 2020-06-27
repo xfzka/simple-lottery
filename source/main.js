@@ -117,6 +117,10 @@ function addPrizeToPage(prizeName) {
 function addPrize(prizeName, awardWeight) {
     // 放大权重，增加权重准确度
     let tmpAwardWeight = parseInt(awardWeight) * 10;
+    // 默认权重 100
+    if (typeof awardWeight != 'string') {
+        tmpAwardWeight = 100
+    }
     for (var i = 0; i < tmpAwardWeight; i++) {
         prizeList.push(prizeName);
     }
