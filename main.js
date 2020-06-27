@@ -14,7 +14,8 @@ function addPrizeToPage(prizeName){let html=`<div class="column">
                         <h2>${prizeName}</h2>
                     </div>
                 </div>`;$('#prizePool').append(html);}
-function addPrize(prizeName,awardWeight){let tmpAwardWeight=parseInt(awardWeight)*10;for(var i=0;i<tmpAwardWeight;i++){prizeList.push(prizeName);}
+function addPrize(prizeName,awardWeight){let tmpAwardWeight=parseInt(awardWeight)*10;if(typeof awardWeight!='string'){tmpAwardWeight=100}
+for(var i=0;i<tmpAwardWeight;i++){prizeList.push(prizeName);}
 addPrizeToPage(prizeName);}
 function startLottery(){lotteryInterval=setInterval(function(){let randomPrizeName=prizeList[Math.floor(Math.random()*prizeList.length)];while(randomPrizeName==lastItem){randomPrizeName=prizeList[Math.floor(Math.random()*prizeList.length)];}
 lastItem=randomPrizeName;let highlightedColor='inverted blue';$(`[data-name]`).removeClass(highlightedColor);$(`[data-name=${randomPrizeName}]`).addClass(highlightedColor).transition({animation:'pulse',duration:`${parseInt(1000/flashSpeed)*2}ms`});},parseInt(1000/flashSpeed))}
