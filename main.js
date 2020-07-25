@@ -1,4 +1,4 @@
-let prizeList=[];let lotteryInterval=null;let lastItem=null;const flashSpeed=8;const bgImageCount=11;function clearPagePrizePool(){$('#prizePool').html('');prizeList=[];}
+let prizeList=[];let lotteryInterval=null;let lastItem=null;const flashSpeed=8;const bgImageCount=11;$('#prizePoolText').attr('placeholder',"铅笔 10\r\n橡皮 5\r\n100元 0");function clearPagePrizePool(){$('#prizePool').html('');prizeList=[];}
 function autoSetColumns(prizeItemCount){let columnCount='';if(prizeItemCount%3===0){columnCount='three';}else{columnCount='four';}
 $('#prizePool').removeClass().addClass(`ui ${columnCount} column grid`);}
 function setPrizePool(){const warningText='确定要清空奖池吗？如果确定请继续点击【保存设置】按钮。';let prizePoolText=$('#prizePoolText').val();if(prizePoolText.trim().length==0){$('#prizePoolText').val(warningText);return false;}else if(prizePoolText==warningText){localStorage.setItem('prizePoolText','');return true;}
