@@ -9,6 +9,9 @@ const flashSpeed = 8;
 // 背景图片数量
 const bgImageCount = 11;
 
+// 设置奖池 placeholder 提示
+$('#prizePoolText').attr('placeholder', "铅笔 10\r\n橡皮 5\r\n100元 0");
+
 // 清理页面奖品池
 function clearPagePrizePool() {
     $('#prizePool').html('');
